@@ -395,35 +395,43 @@ main {
 
 .info_more-btn {
   position: absolute;
-  top: -15px;
-  right: -15px;
-  border-radius: 0 15px;
-  font-size: 13px;
+  top: -20px; /* Adjust position to accommodate larger size */
+  right: -20px;
+  border-radius: 0 20px; /* Increase border radius */
+  font-size: 16px; /* Increase font size */
   color: var(--orange-yellow-crayola);
-  background: var(--border-gradient-onyx);
-  padding: 10px;
-  box-shadow: var(--shadow-2);
-  transition: var(--transition-1);
-  z-index: 1;
+ background: var(--bg-gradient-yellow-1); /* Use a bright, eye-catching background */
+  padding: 15px; /* Increase padding to make the button larger */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Enhance shadow for more depth */
+  transition: transform 0.3s ease, background 0.3s ease; /* Smooth transition for size and color */
+  z-index: 10; /* Ensure it is on top of other elements */
 }
 
 .info_more-btn::before {
   content: "";
   position: absolute;
-  inset: 1px;
+  inset: 2px; /* Adjust inset for larger button */
   border-radius: inherit;
   background: var(--bg-gradient-jet);
-  transition: var(--transition-1);
+  transition: background 0.3s ease;
   z-index: -1;
 }
 
 .info_more-btn:hover,
-.info_more-btn:focus { background: var(--bg-gradient-yellow-1); }
+.info_more-btn:focus {
+  background: var(--bg-gradient-yellow-2); /* Use a bright hover color */
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
 
 .info_more-btn:hover::before,
-.info_more-btn:focus::before { background: var(--bg-gradient-yellow-2); }
+.info_more-btn:focus::before {
+  background: var(--bg-gradient-yellow-3); /* Even more vibrant background on hover */
+}
 
-.info_more-btn span { display: none; }
+.info_more-btn span {
+  display: inline; /* Show the span content to draw more attention */
+  font-weight: bold; /* Make the text bold */
+}
 
 .sidebar-info_more {
   opacity: 0;
