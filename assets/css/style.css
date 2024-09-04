@@ -139,6 +139,45 @@ button {
   cursor: pointer;
 }
 
+/* Styling for the Resume Buttons */
+.resume-buttons {
+  display: flex;
+  justify-content: space-between; /* Positions buttons on opposite ends */
+  align-items: center;
+  margin-top: 20px;
+}
+
+.resume-btn {
+  background-color: transparent; /* Transparent background for the button */
+  color: white; /* White text color */
+  border: 2px solid white; /* White border */
+  padding: 10px 20px; /* Padding inside the button */
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-flex; /* Aligns icon and text inline */
+  align-items: center;
+  gap: 8px; /* Spacing between icon and text */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Hover effects for the buttons */
+.resume-btn:hover {
+  background-color: white;
+  color: black; /* Text color changes on hover */
+}
+
+/* Styling for the ion-icon within the buttons */
+.resume-btn ion-icon {
+  font-size: 18px;
+}
+
+/* Ensuring the section has some spacing around it */
+.resume-section {
+  padding: 20px 0;
+}
+
 input, textarea {
   display: block;
   width: 100%;
@@ -801,44 +840,7 @@ main {
 /*-----------------------------------*\
   #RESUME
 \*-----------------------------------*/
-/* Styling for the Resume Buttons */
-.resume-buttons {
-  display: flex;
-  justify-content: space-between; /* Positions buttons on opposite ends */
-  align-items: center;
-  margin-top: 20px;
-}
 
-.resume-btn {
-  background-color: transparent; /* Transparent background for the button */
-  color: white; /* White text color */
-  border: 2px solid white; /* White border */
-  padding: 10px 20px; /* Padding inside the button */
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  cursor: pointer;
-  display: inline-flex; /* Aligns icon and text inline */
-  align-items: center;
-  gap: 8px; /* Spacing between icon and text */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
-}
-
-/* Hover effects for the buttons */
-.resume-btn:hover {
-  background-color: white;
-  color: black; /* Text color changes on hover */
-}
-
-/* Styling for the ion-icon within the buttons */
-.resume-btn ion-icon {
-  font-size: 18px;
-}
-
-/* Ensuring the section has some spacing around it */
-.resume-section {
-  padding: 20px 0;
-}
 
 .article-title { margin-bottom: 30px; }
 
