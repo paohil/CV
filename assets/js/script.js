@@ -115,24 +115,26 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 
 
-// contact form variables
+// Select form, inputs, and button
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
+// Function to check form validation
+const checkFormValidation = () => {
+  if (form.checkValidity()) {
+    formBtn.removeAttribute("disabled");
+  } else {
+    formBtn.setAttribute("disabled", "");
+  }
+};
 
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
+// Add event listener to all form input fields
+formInputs.forEach(input => input.addEventListener("input", checkFormValidation));
 
-  });
-}
+// Optionally, run validation on page load to handle pre-filled inputs
+document.addEventListener("DOMContentLoaded", checkFormValidation);
+
 
 
 
