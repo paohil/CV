@@ -53,6 +53,25 @@ for (let i = 0; i < testimonialsItem.length; i++) {
 modalCloseBtn.addEventListener("click", testimonialsModalFunc);
 overlay.addEventListener("click", testimonialsModalFunc);
 
+document.addEventListener("DOMContentLoaded", function() {
+  const modal = document.getElementById("resumeModal");
+  const btn = document.getElementById("viewResumeBtn");
+  const span = document.querySelector(".close");
+
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+});
 
 
 // custom select variables
