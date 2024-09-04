@@ -669,6 +669,44 @@ main {
   z-index: 2;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  height: auto;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 50px;
+  right: 100px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .modal-container.active .testimonials-modal {
   transform: scale(1);
   opacity: 1;
