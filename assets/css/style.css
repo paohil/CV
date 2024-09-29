@@ -803,7 +803,10 @@ main {
  * #clients 
  */
 
-.clients { margin-bottom: 15px; }
+.clients { 
+margin-bottom: 15px; 
+margin-top: 20px;
+}
 
 .clients-list {
   display: flex;
