@@ -833,7 +833,9 @@ margin-top: 20px;
   transition: var(--transition-1);
 }
 
-.clients-item img:hover { transform: scale(3); }
+.clients-item img:hover { transform: scale(1.25); }
+
+
 
 
 /*-----------------------------------*\
